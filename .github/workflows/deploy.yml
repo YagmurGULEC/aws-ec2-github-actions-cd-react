@@ -34,14 +34,7 @@ jobs:
         ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
     - name: Deploy to EC2
       run: |
-        sudo dnf install -y httpd
-        if ! which httpd > /dev/null 2>&1; then
-        echo "httpd is not installed. Installing now..."
-        sudo dnf install -y httpd
-        echo "httpd installed successfully."
-        else
-        echo "httpd is already installed."
-        fi
+        echo "Deploying to EC2"
 
 
      
